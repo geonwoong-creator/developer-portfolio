@@ -1,3 +1,4 @@
+
 # Developer Portfolio
 
 This repository contains an AI‑powered portfolio and service showcase built with **Next.js 15**. It demonstrates how to combine TypeScript, Tailwind CSS and Framer Motion to create an engaging single page experience.
@@ -45,4 +46,8 @@ npm run lint
 ## Deployment
 
 The project can be deployed to any Node.js hosting provider. It is pre‑configured for Vercel, which supports the Next.js App Router out of the box.
+
+=======
+# developer-portfolio
+포트폴리오 사이트입니다. 
 
