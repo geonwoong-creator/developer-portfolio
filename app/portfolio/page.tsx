@@ -23,6 +23,7 @@ import {
   ChevronRight,
   Eye,
   GraduationCap,
+  Settings,
   Star
 } from 'lucide-react';
 import Link from 'next/link';
@@ -77,27 +78,29 @@ const projects = [
   },
   {
     id: 'law-firm',
-    title: '프리미엄 법무법인',
+    title: '법무법인 정의 - 반응형 웹사이트',
     category: '법무서비스',
-    description: '전문적이고 신뢰감 있는 법무법인 웹사이트. 상담 예약, 전문분야 소개, 성공사례 포트폴리오',
+    description: 'Next.js 14와 TypeScript로 구축된 전문적인 법무법인 웹사이트. 실제 사용 가능한 수준의 완성도로 제작된 포트폴리오 프로젝트',
     image: '⚖️',
-    color: 'from-slate-600 to-gray-700',
-    liveUrl: '#',
-    githubUrl: '#',
-    techStack: ['Next.js', 'TypeScript', 'TailwindCSS', 'Framer Motion'],
+    color: 'from-blue-600 to-blue-700',
+    liveUrl: 'https://law-firm-portfolio.vercel.app/', // 여기에 배포 URL 입력
+    githubUrl: 'https://github.com/geonwoong-creator/law-firm-portfolio', // 여기에 GitHub URL 입력
+    techStack: ['Next.js 14', 'TypeScript', 'TailwindCSS', 'Framer Motion'],
     features: [
-      '온라인 상담 예약',
-      '전문분야별 페이지',
-      '변호사 소개',
-      '성공사례 갤러리',
-      '법률 뉴스',
-      '다국어 지원 준비'
+      '완전 반응형 디자인',
+      '변호사별 상세 프로필 페이지',
+      '주요사례 슬라이더 & 상세페이지',
+      '인터랙티브 애니메이션',
+      '무료 상담 신청 폼',
+      '404 에러 페이지',
+      'SEO 최적화',
+      'TypeScript 100% 지원'
     ],
     highlights: [
-      { icon: Clock, text: '개발기간: 1.5주' },
+      { icon: Clock, text: '개발기간: 1주' },
       { icon: Scale, text: '타겟: 법무법인' },
-      { icon: Shield, text: '보안 강화' },
-      { icon: Users, text: '전문가 이미지' }
+      { icon: Shield, text: '전문성 & 신뢰성' },
+      { icon: Users, text: '실무 수준 완성도' }
     ],
     developmentProcess: [
       'AI 기반 콘텐츠 기획',
@@ -108,6 +111,41 @@ const projects = [
       '배포 및 최적화'
     ]
   },
+  {
+    id: 'test-machine',
+    title: 'TestMachine - 산업용 정밀기계 전문기업',
+    category: '일반 기업',
+    description: 'Next.js 14와 TypeScript로 구축된 강력하고 남성적인 산업기계 기업 웹사이트. 다크 테마와 파워풀한 디자인으로 극한의 성능을 표현',
+    image: '⚙️',
+    color: 'from-orange-600 to-red-600',
+    liveUrl: 'https://machinery-portfolio.vercel.app/', // 배포 URL
+    githubUrl: 'https://github.com/geonwoong-creator/machinery-portfolio', // GitHub URL
+    techStack: ['Next.js 14', 'TypeScript', 'TailwindCSS', 'Framer Motion'],
+    features: [
+      '완전 반응형 다크 테마 디자인',
+      '초고압 성형프레스 상세 페이지',
+      '실시간 스펙 애니메이션',
+      '산업별 적용사례 섹션',
+      '고객 후기 & 성공사례',
+      '전문 상담 신청 폼',
+      '포트폴리오 특화 404 페이지',
+      'TypeScript 인터페이스 완벽 적용'
+    ],
+    highlights: [
+      { icon: Zap, text: '개발기간: 1주' },
+      { icon: Settings, text: '타겟: 제조업체' },
+      { icon: Shield, text: '극한 성능 & 내구성' },
+      { icon: TrendingUp, text: '포트폴리오 완성도' }
+    ],
+    developmentProcess: [
+      '산업 특성 분석 & 컨셉 설정',
+      '다크 테마 & 강력한 브랜딩',
+      '3제품 라인업 구성',
+      '1000톤 프레스 상세페이지',
+      '기술사양 & 고객후기',
+      '포트폴리오 최적화'
+    ]
+}
 ];
 
 const categories = ['전체', '의료기관', '법무서비스', '일반 기업'];

@@ -49,7 +49,7 @@ const projectTypes = [
     title: '병원/치과 홈페이지',
     icon: Heart,
     color: 'from-teal-500 to-cyan-500',
-    price: '150-300만원',
+    price: '80-200만원',
     period: '1-2주',
     features: [
       '예약 시스템',
@@ -66,7 +66,7 @@ const projectTypes = [
     title: '법무법인 홈페이지',
     icon: Scale,
     color: 'from-slate-600 to-gray-700',
-    price: '200-400만원',
+    price: '80-200만원',
     period: '1.5-2.5주',
     features: [
       '상담 예약 시스템',
@@ -653,7 +653,7 @@ export default function ContactPage() {
                 </motion.button>
                 
                 <p className="text-center text-sm text-gray-400 mt-4">
-                  상담 신청 후 24시간 내 연락드립니다. 급한 경우 직접 연락 주세요.
+                  상담 신청 후 24시간 내 연락드립니다.
                 </p>
               </div>
             </form>
@@ -661,117 +661,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Direct Contact */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-4xl mx-auto">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              직접 <span className="text-blue-400">연락하기</span>
-            </h2>
-            <p className="text-xl text-gray-300">
-              급한 프로젝트나 즉시 상담이 필요하시면 바로 연락해주세요
-            </p>
-          </motion.div>
 
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-          >
-            {[
-              {
-                icon: Phone,
-                title: '전화 상담',
-                info: '010-1234-5678',
-                description: '평일 9:00-18:00 즉시 상담 가능',
-                action: 'tel:010-1234-5678',
-                color: 'from-green-500 to-emerald-500'
-              },
-              {
-                icon: Mail,
-                title: '이메일 문의',
-                info: 'contact@example.com',
-                description: '24시간 내 답변 보장',
-                action: 'mailto:contact@example.com',
-                color: 'from-blue-500 to-cyan-500'
-              },
-              {
-                icon: MessageCircle,
-                title: '카카오톡 상담',
-                info: '@developer_id',
-                description: '실시간 채팅 상담',
-                action: '#',
-                color: 'from-yellow-500 to-orange-500'
-              }
-            ].map((contact, index) => (
-              <motion.a
-                key={index}
-                href={contact.action}
-                className="group"
-                variants={fadeInUp}
-                whileHover={{ y: -5 }}
-              >
-                <div className="bg-slate-800 p-8 rounded-xl border border-slate-700 group-hover:border-slate-600 transition-all duration-300 text-center">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${contact.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>
-                    <contact.icon className="w-8 h-8 text-white" />
-                  </div>
-                  
-                  <h3 className="text-xl font-semibold text-white mb-2">{contact.title}</h3>
-                  <div className="text-blue-400 font-semibold mb-3">{contact.info}</div>
-                  <p className="text-gray-300 text-sm">{contact.description}</p>
-                  
-                  <div className="mt-4 text-blue-400 text-sm font-medium group-hover:text-blue-300 transition-colors">
-                    바로 연락하기 →
-                  </div>
-                </div>
-              </motion.a>
-            ))}
-          </motion.div>
-
-          {/* Additional Info */}
-          <motion.div 
-            className="mt-12 bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-600/20 rounded-xl p-8"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            <div className="text-center">
-              <Bot className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">
-                AI 기반 빠른 견적 시스템
-              </h3>
-              <p className="text-gray-300 mb-6">
-                요구사항을 말씀해주시면 AI 분석을 통해 <span className="text-blue-400">10분 내</span> 정확한 견적과 
-                개발 일정을 제공해드립니다.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="flex items-center justify-center">
-                  <Zap className="w-5 h-5 text-yellow-400 mr-2" />
-                  <span className="text-sm text-gray-300">10분 내 견적</span>
-                </div>
-                <div className="flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-green-400 mr-2" />
-                  <span className="text-sm text-gray-300">100% 보안 상담</span>
-                </div>
-                <div className="flex items-center justify-center">
-                  <Star className="w-5 h-5 text-purple-400 mr-2" />
-                  <span className="text-sm text-gray-300">맞춤 솔루션 제안</span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* FAQ Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -814,7 +704,7 @@ export default function ContactPage() {
               },
               {
                 question: '어떤 종류의 웹사이트까지 제작 가능한가요?',
-                answer: '병원, 법무법인, 세무사무소 등 지역 비즈니스부터 쇼핑몰, 포트폴리오, 기업 사이트까지 대부분의 웹사이트 제작이 가능합니다. 복잡한 기능이 필요한 경우 상담을 통해 가능 여부를 확인해드립니다.'
+                answer: '병원, 법무법인, 세무사무소 등 지역 비즈니스부터 랜딩페이지, 쇼핑몰, 포트폴리오, 기업 사이트까지 대부분의 웹사이트 제작이 가능합니다. 복잡한 기능이 필요한 경우 상담을 통해 가능 여부를 확인해드립니다.'
               },
               {
                 question: 'SEO 최적화나 검색 노출은 어떻게 되나요?',
